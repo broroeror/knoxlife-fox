@@ -1,8 +1,8 @@
 name=KnoxLife: Foxes
 id=KnoxLifeFoxes
-description=Red fox: farm edge, fencerow and woodland margin, and the most adaptable of the four. Thrives near people. Built on a vanilla animal skeleton so it uses the game's own animation set, and placed on habitat baked for it rather than borrowed from another animal. REQUIRES Knox Wildlife.
+description=Red fox: farm edge, fencerow and woodland margin, and the most adaptable of the four. Thrives near people. Built on a vanilla animal skeleton so it uses the game's own animation set, and placed on habitat baked for it rather than borrowed from another animal. REQUIRES KnoxLife.
 require=KnoxLife
 modversion=0.1.0
 versionMin=42.16
 icon=icon.png
-url=https://github.com/broroeror/knox-wildlife-fox
+url=https://github.com/broroeror/knoxlife-fox

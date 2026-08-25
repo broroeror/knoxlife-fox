@@ -1,8 +1,8 @@
-# Knox Wildlife: Fox
+# KnoxLife: Foxes
 
-Red fox for Project Zomboid (build 42): farm edge, fencerow and woodland margin, and the most adaptable of the four Knox Wildlife species. Thrives near people.
+Red fox for Project Zomboid (build 42): farm edge, fencerow and woodland margin, and the most adaptable of the four KnoxLife species. Thrives near people.
 
-A species addon for [Knox Wildlife](https://github.com/broroeror/knox-wildlife),
+A species addon for [KnoxLife](https://github.com/broroeror/knoxlife),
 which it requires. The base mod owns the migration routes and the population
 model; this addon ships the fox itself — model, textures, sounds, and its
 habitat registration. Built on a vanilla animal skeleton so it uses the game's
@@ -10,7 +10,7 @@ own animation sets.
 
 ## Settings
 
-On the **Knox Wildlife: Animals** sandbox page:
+On the **KnoxLife: Animals** sandbox page:
 
 - **add them to the world** — turn the species off and its routes are simply
   not placed; no other animal gains or loses anything;

@@ -1,4 +1,4 @@
--- Knox Wildlife: Fox -- registration.
+-- Knox Life: Fox -- registration.
 --
 -- The whole spawning side of this mod. There is no generator here and no map
 -- analysis: Fox_RouteData.lua is baked offline by the base mod's
@@ -12,7 +12,7 @@
 -- means it inherits nothing: its own terrain, its own geometry, no sharing.
 
 if not KnoxLife or (KnoxLife.API_VERSION or 0) < 1 then
-    print("[KnoxLifeFoxes] Knox Wildlife not found (or too old); "
+    print("[KnoxLifeFoxes] KnoxLife not found (or too old); "
         .. "this addon needs API_VERSION 1. Not loading.")
     return
 end

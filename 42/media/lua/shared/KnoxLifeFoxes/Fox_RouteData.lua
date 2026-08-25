@@ -3,12 +3,12 @@
 -- tools/split_critters.py. Rebake with:
 --
 --   python3 tools/gen_routes.py \
---       --profile-file mods/KnoxWildlifeFox/habitats.json \
---       --profiles kwc_fox --var KnoxWildlifeFox.Routes --register \
---       --out mods/KnoxWildlifeFox/42/media/lua/shared/KnoxWildlifeFox/Fox_RouteData.lua
+--       --profile-file mods/KnoxLifeFoxes/habitats.json \
+--       --profiles kwc_fox --var KnoxLifeFoxes.Routes --register \
+--       --out mods/KnoxLifeFoxes/42/media/lua/shared/KnoxLifeFoxes/Fox_RouteData.lua
 
-KnoxWildlifeFox = KnoxWildlifeFox or {}
-KnoxWildlifeFox.Routes = {
+KnoxLifeFoxes = KnoxLifeFoxes or {}
+KnoxLifeFoxes.Routes = {
     kwc_fox = {
         {
             score = 1.4184,
@@ -4213,11 +4213,11 @@ KnoxWildlifeFox.Routes = {
     },
 }
 
--- Hand the pool to Knox Wildlife. Guarded because a user
+-- Hand the pool to Knox Life. Guarded because a user
 -- can disable the base mod and leave this one enabled, and a
 -- silent no-op reads better than a stack trace on their screen.
 if KnoxLife and KnoxLife.registerRoutePool then
-    for name, pool in pairs(KnoxWildlifeFox.Routes) do
+    for name, pool in pairs(KnoxLifeFoxes.Routes) do
         KnoxLife.registerRoutePool(name, pool)
     end
 end
