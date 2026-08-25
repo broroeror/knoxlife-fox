@@ -2,43 +2,92 @@
 
 ## Audio
 
-Every voice clip is derived from a Creative Commons Zero (CC0) recording from
-[Freesound](https://freesound.org/). CC0 waives copyright entirely and imposes no
-attribution requirement — this list exists because knowing where an asset came
-from is worth more than the licence obliges, and because it is the only way to
-re-derive the clips if a source is ever replaced.
+Two different licences cover the clips in this mod family, and the difference
+matters if you are thinking of reusing them.
 
-Freesound IDs are the number leading each filename, so any entry can be checked
-at `https://freesound.org/s/<id>/`.
+**The canid and felid voices are commercially licensed.** They are derived from
+libraries bought from [Sonniss](https://sonniss.com/), whose licence permits use
+in an unlimited number of projects, free or commercial, without attribution — but
+explicitly forbids passing the sounds on to anyone else. So they are credited
+here because provenance is worth recording, **not** because the licence demands
+it, and the reuse grant in `ASSETS-LICENSE.md` deliberately does not extend to
+them. See that file.
+
+**The squirrel is CC0** from [Freesound](https://freesound.org/), where the
+number leading each row is the sound ID and can be checked at
+`https://freesound.org/s/<id>/`.
+
+### Coyote — Discover Oregon, recorded by Tyler Hulett
+
+| clip | source recording |
+|---|---|
+| idle, idle2, idle3, stressed, stressed2, pain | *Coyotes*, Discover Oregon Audio Library |
+| death | *Arctic Fox, Animal* (Digiffects) |
+
+Wild coyotes recorded in Oregon's Great Basin. The death clip is the exception —
+see the substitutions note below.
+
+### Fox — AudioHero
+
+| clip | source recording |
+|---|---|
+| idle, idle2, idle3 | *Fox, Young, Fighting, Animal, Grumbles* (Digiffects) |
+| stressed, stressed2 | *Fox* (AudioHero, Animals Vol. 3) |
+| pain, death | *Arctic Fox, Animal* (Digiffects) |
+
+### Bobcat — AudioHero
+
+| clip | source recording |
+|---|---|
+| idle | *Cat Purr Close Up* |
+| idle2 | *Domestic House Cat: Soft Meow* |
+| idle3 | *Sad Cat Moans* |
+| stressed, stressed2 | *Wild Bobcat: Growls and Snarls* |
+| pain, death | *Cat, Meowing, Animal* (Digiffects) |
+
+### Squirrel — Freesound, CC0
 
 | # | uploader | recording | used for |
 |---|---|---|---|
-| 530123 | naturenotesuk | Quarrelling foxes | fox — idle |
-| 518135 | lonskwad2020 | Fox scream | fox — stressed, death |
-| 537587 | craigsays | Red fox screeching | fox — pain |
-| 376832 | felixblume | A coyote is howling at night in the Gran Sabana | coyote — idle |
-| 256533 | dkaufman | Coyote barks and howls | coyote — stressed |
-| 833773 | darcydunes | coyote_03 | coyote — pain |
-| 833772 | darcydunes | coyote_02 | coyote — death |
-| 678416 | mpooman | Caracal sounds (SE510) | bobcat — idle, stressed, death |
-| 146972 | zabuhailo | Cat attack | bobcat — pain |
-| 494745 | mzimny | Squirrel chirping | squirrel — idle |
-| 18515 | cognito-perceptu | Squirrel upset | squirrel — stressed |
-| 640992 | burgersmoke | Ground squirrel, first chirp | squirrel — pain |
-| 640993 | burgersmoke | Ground squirrel, second chirp | squirrel — death |
+| 494745 | mzimny | Squirrel chirping | idle |
+| 18515 | cognito-perceptu | Squirrel upset | stressed |
+| 640992 | burgersmoke | Ground squirrel, first chirp | pain |
+| 640993 | burgersmoke | Ground squirrel, second chirp | death |
 
-**On the bobcat.** No bobcat recording is used, because they are nearly impossible
-to find — bobcats are largely silent and their yowl is rarely captured. The stand-in
-is a **caracal**, a wild cat of roughly bobcat size whose rasp and yowl sit in
-about the right register. It is a substitution, not a bobcat.
+### Substitutions, declared
 
-Each juvenile clip is its adult counterpart pitched up by a factor of 1.22, baked
+Three species stand in for others somewhere in the set. None of this is hidden
+in the audio; it is listed so nobody has to reverse-engineer it.
+
+- **The bobcat is mostly a domestic cat.** Only *stressed* and *stressed2* are a
+  real bobcat — a caged one, which is why they are growls and snarls rather than
+  anything calm. The three idles and the pain and death clips are a house cat,
+  pitched down. That is a closer substitution than it sounds: a bobcat is *Lynx
+  rufus*, a small cat, and its calm vocabulary really is close to a house cat's.
+  An earlier version used a **caracal** for the same slots and it was worse —
+  wrong genus, raspier voice, and all three idles were hiss.
+- **The coyote death is an arctic fox.** Coyote death vocalisations are not
+  something anyone has recorded and released.
+- **The fox pain and death are an arctic fox**, not the red fox the mod depicts.
+
+### Juveniles
+
+Every baby clip is its adult counterpart pitched up by a factor of 1.22, baked
 offline because the engine parses a `pitch` key on a sound clip and never reads
 it. No separate recordings were needed for the young animals.
 
-The exact source-to-clip mapping, including which span of each recording was taken,
-lives in the development repo's `tools/import_all_sounds.sh`. The clips are derived files: change the
-mapping and re-run rather than editing audio by hand.
+The one place this is a real compromise is the **coyote pup**: coyote pups yip and
+whine rather than howl, so a pitched-up adult call is a smaller adult rather than
+a young animal. Real coyote pup recordings exist but the ones found were too quiet
+to use.
+
+### Reproducing these
+
+The clips were cut by hand from the source libraries rather than by the automatic
+span-picker, because hand cuts kept their attacks and the picker did not. The
+edited sources live in the development repo under `audio/`, and
+`tools/import_all_sounds.sh` turns them into the shipped files. They are derived
+files: change the source and re-run rather than editing audio by hand.
 
 ## Models
 
