@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animNode>
+	<m_Name>attackDefault</m_Name>
+	<m_AnimName>Rac_Run</m_AnimName>
+	<m_BlendTime>0.15</m_BlendTime>
+	<m_SpeedScale>1.00</m_SpeedScale>
+	<m_SyncTrackingEnabled>false</m_SyncTrackingEnabled>
+	<m_Events x_name="knoxlife-attack-sound">
+		<m_EventName>PlayBreedSound</m_EventName>
+		<m_Time>Start</m_Time>
+		<m_ParameterValue>stressed</m_ParameterValue>
+	</m_Events>
+	<m_Events x_name="knoxlife-attack-connect">
+		<m_EventName>AttackConnect</m_EventName>
+		<m_TimePc>0.80</m_TimePc>
+		<m_ParameterValue></m_ParameterValue>
+	</m_Events>
+</animNode>
