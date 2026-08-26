@@ -47,7 +47,18 @@ if KW.registerSpecies(ID, {
     possibleBreed = "default",
     minAnimal = 1, maxAnimal = 2, maxMale = 1,
     babyChance = 45,
-    trackSize = "small", speed = 0.06,
+    -- ⚠️ A PREDATOR MUST OUTPACE ITS PREY. This was 0.06, against a rabbit's
+    -- 0.03 and a deer's 0.07, so a hunting animal closed on its target at a
+    -- stroll and a provoked one walked up to the player. The food chain worked
+    -- and looked absurd.
+    --
+    -- `speed` is a flat multiplier on the migration group and there is NO
+    -- runtime speed control: IsoAnimal exposes none, and BaseAnimalBehavior's
+    -- wanderMulMod is referenced only by its own declaration. So a predator
+    -- cannot sprint only while hunting -- this lifts its pace generally, which
+    -- suits an animal that patrols a territory rather than grazing across one.
+    -- Vanilla's own (unfinished) "predator" group runs 0.5, so this is modest.
+    trackSize = "small", speed = 0.15,
     density = DENSITY,
     habitat = ID,
     enabledOption = "KnoxLifeFoxes.Enabled",
