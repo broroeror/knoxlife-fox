@@ -42,6 +42,26 @@ if AnimalDefinitions and AnimalDefinitions.animals
     return
 end
 
+-- The animation set and action group this mod ships under
+--     42/media/AnimSets/kwc_fox/  and  42/media/actiongroups/kwc_fox/
+--
+-- Both are DORMANT: nothing names them, so the engine never opens either one,
+-- and the actiongroup half is unreachable from a mod in any case. These animals
+-- run on the base-game "raccoon" set exactly as before. Declaring the pair here
+-- only tells an optional Java addon what it may switch on once it has patched
+-- ActionGroup.load and VERIFIED the patch took. See KW_AnimSets.lua.
+--
+-- Feature-detected rather than version-gated: registerAnimSet is additive, so
+-- API_VERSION stays 1 and an older core simply skips this.
+if KW.registerAnimSet then
+    KW.registerAnimSet("kwc_fox", {
+        animset  = "kwc_fox",
+        fallback = "raccoon",
+        stages   = { "kwc_foxkit", "kwc_foxvixen", "kwc_foxdog" },
+        attack   = true,   -- the pair adds an attack state the donor has not got
+    })
+end
+
 if KW.registerSpecies(ID, {
     female = "kwc_foxvixen", male = "kwc_foxdog", baby = "kwc_foxkit",
     possibleBreed = "default",
