@@ -53,6 +53,11 @@ end
 --
 -- Feature-detected rather than version-gated: registerAnimSet is additive, so
 -- API_VERSION stays 1 and an older core simply skips this.
+-- ⚠️ If this is false the animset is silently not declared, and the symptom is
+-- a plan of zero much later with nothing to point at the cause. Say so.
+if not KW.registerAnimSet and KW.log then
+    KW.log("fox: KW.registerAnimSet missing at load; animset NOT declared")
+end
 if KW.registerAnimSet then
     KW.registerAnimSet("kwc_fox", {
         animset  = "kwc_fox",
